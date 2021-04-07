@@ -1,5 +1,6 @@
 from budget import Expense
 import collections
+import matplotlib as plt
 
 expenses = Expense.Expenses()
 
@@ -14,5 +15,6 @@ spending_counter = collections.Counter(spending_categories)
 
 top5 = spending_counter.most_common(5)
 
-print(top5)
-print(top5)
+categories, count = zip(*top5)
+
+fig, ax = plt.subplots()
